@@ -20,9 +20,21 @@ pipeline {
         
       }
     }
+    stage('Change dir') {
+      steps {   
+        dir ('/home/mixy/multi') {
+          sh 'pwd'
+          sh 'cp -R /home/qa/jenkins/workspace/multi-drugi_master /home/mixy/multi/'
+          sh 'ls'
+        }
+
+       } 
+    } 
     stage('Docker') {
       steps {   
-        sh "docker-compose up -d"
+        dir ('/home/mixy/multi') {
+          sh 'docker-compose up -d'
+            }
 
        } 
     } 

@@ -33,7 +33,9 @@ pipeline {
     stage('Docker') {
       steps {   
         dir ('/home/mixy/multi') {
-          sh 'docker-compose up -d'
+          sh 'docker-compose down'
+          sh 'docker system prune -f'
+          sh 'docker-compose up --build -d'
             }
 
        } 

@@ -24,7 +24,7 @@ pipeline {
       steps {   
         dir ('/home/mixy/multi') {
           sh 'pwd'
-          sh 'cp -R /home/milos/jenkins /home/mixy/multi/'
+          sh 'cp -R /home/milos/jenkins/workspace/multi-drugi_master /home/mixy/multi/'
           sh 'ls'
         }
 

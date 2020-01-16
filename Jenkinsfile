@@ -25,7 +25,7 @@ pipeline {
           sh 'docker-compose down'
           sh 'docker system prune -f'
           sh 'docker-compose up --build -d'
-          deleteDir()
+          
             }
 
        } 

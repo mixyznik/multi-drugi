@@ -24,7 +24,7 @@ pipeline {
       steps {   
         dir ('/home/milos/multi') {
           sh 'pwd'
-          sh 'cp -R /home/milos/jenkins/workspace/multi-drugi_master/docker-compose.yml /home/mixy/multi/'
+          sh 'cp -R /home/milos/jenkins/workspace/multi-drugi_master/docker-compose.yml /home/mixy/multi'
           sh 'ls'
         }
 

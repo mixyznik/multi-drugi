@@ -22,9 +22,9 @@ pipeline {
     }
     stage('Change dir') {
       steps {   
-        dir ('/home/milos/multi/') {
+        dir ('/home/milos/multi') {
           sh 'pwd'
-          sh 'cp -R /home/milos/jenkins/workspace/multi-drugi_master/docker-compose.yml /home/milos/multi/'
+          sh 'cp -R /home/milos/jenkins/workspace/multi-drugi_master /home/milos/multi/'
           sh 'ls'
         }
 
@@ -32,7 +32,7 @@ pipeline {
     } 
     stage('Docker') {
       steps  {
-         dir ('/home/milos/multi/') {
+         dir ('/home/milos/multi') {
           
           sh 'docker-compose up --build -d'
             }

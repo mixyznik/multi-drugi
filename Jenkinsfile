@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'remote' }
+  agent { label 'remote-node-new' }
   
   stages {
     stage('Example') {

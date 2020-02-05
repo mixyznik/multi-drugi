@@ -24,7 +24,7 @@ pipeline {
       steps {   
         dir ('/home/milos/multi') {
           sh 'pwd'
-          sh 'cp -R /home/milos/jenkins/workspace/multi-drugi-new_master/* /home/milos/multi'
+          sh 'cp -R /home/milos/new/workspace/multi-drugi-new_master/* /home/milos/multi'
           sh 'ls'
         }
 
@@ -43,7 +43,7 @@ pipeline {
 
   post{
     success{
-        script{emailext(to: '$DEFAULT_RECIPIENTS', 
+        script{emailext(to: 'mimi.mimijevic@yandex.com', 
                         body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\nMore info at: ${env.BUILD_URL}console", 
                         recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']],
                         subject: "Jenkins Build ${currentBuild.currentResult}: Job ${env.JOB_NAME}")}}}

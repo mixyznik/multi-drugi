@@ -10,7 +10,7 @@ services:
             dockerfile: Dockerfile.dev
             context: ./nginx 
         ports: 
-            - '172.17.0.1:80:80'        
+            - '172.17.0.1:3050:80'        
     api:
         depends_on: 
             - postgres

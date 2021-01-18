@@ -32,7 +32,7 @@ pipeline {
     } 
     stage('Docker') {
       steps  {
-         dir ('/home/milos/multi') {
+         dir ('/home/milos/multi1') {
           sh 'docker-compose down' 
           sh 'docker system prune -f'
           sh 'docker-compose up --build -d'

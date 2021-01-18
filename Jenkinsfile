@@ -24,7 +24,7 @@ pipeline {
       steps {   
         dir ('/home/milos/multi') {
           sh 'pwd'
-          sh 'cp -R /home/milos/new/workspace/multi-drugi-new_master/* /home/milos/multi1'
+          sh 'cp -R /home/milos/new/workspace/ub-jenkins-mixyznik.click_master/* /home/milos/multi'
           sh 'ls'
         }
 
@@ -32,7 +32,7 @@ pipeline {
     } 
     stage('Docker') {
       steps  {
-         dir ('/home/milos/multi1') {
+         dir ('/home/milos/multi') {
           sh 'docker-compose down' 
           sh 'docker system prune -f'
           sh 'docker-compose up --build -d'

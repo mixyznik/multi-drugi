@@ -24,7 +24,7 @@ pipeline {
       steps {   
         dir ('/home/milos/multi') {
           sh 'pwd'
-          sh 'cp -R /home/milos/new/workspace/multi-drugi-new_master/* /home/milos/multi'
+          sh 'cp -R /home/milos/new/workspace/multi-drugi-new_master/* /home/milos/multi1'
           sh 'ls'
         }
 

@@ -42,7 +42,7 @@ pipeline {
   }    
 
   post{
-    success{
+    always{
         script{emailext(to: 'mimi.mimijevic@yandex.com', 
                         body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\nMore info at: ${env.BUILD_URL}console", 
                         recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']],

@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import OtherPage from './OtherPage';
 import Fib from './Fib';
 
+const { REACT_APP_MY_ENV } = process.env;
+
 class App extends Component {
   render() {
     return (
@@ -12,7 +14,7 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to mixyznik.click!!! Build number: ${process.env.BUILD_NUMBER} Jenkins pipeline RADI!!!</h1>
+            <h1 className="App-title">Welcome to mixyznik.click!!! Build number: {REACT_APP_MY_ENV} Jenkins pipeline RADI!!!</h1>
             <Link to="/">Home</Link>
             <Link to="/otherpage">Other Page</Link>
           </header>
